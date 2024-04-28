@@ -19,6 +19,11 @@ path = "src/lib.rs"
 [dependencies]
 libc = "^0.2"
 
+[build-dependencies.sdl2-src]
+version = "0.1"
+optional = true
+path = "../sdl2-src"
+
 [build-dependencies.bindgen]
 version = "^0.53"
 optional = true
@@ -51,7 +56,7 @@ use-vcpkg = ["vcpkg"]
 use-bindgen = ["bindgen"]
 static-link = []
 use_mac_framework = []
-bundled = ["cmake"]
+bundled = ["cmake", "sdl2-src"]
 mixer = []
 image = []
 ttf = []
